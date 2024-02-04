@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    height: 512px;
+    width: 512px;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex: 1;
+}
+
+.item{
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    flex: 1;
+}
