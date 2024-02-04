@@ -1,5 +1,21 @@
 const container = document.querySelector(".container");
 const btn = document.querySelector(".makeGrid");
+const reset = document.querySelector(".reset");
+
+reset.addEventListener('click', ()=>{
+    document.querySelectorAll(".item").forEach(item => {
+        item.style.backgroundColor = 'white';
+    });
+});
+
+function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
 let gridSize=10;
 
@@ -20,6 +36,10 @@ function createGrid(size) {
             const item = document.createElement("div");
             item.classList.add("item");
             row.appendChild(item);
+
+            item.addEventListener('mouseover', ()=>{
+                item.style.backgroundColor=getRandomColor();
+            });
         }
     }
 }
