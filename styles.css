@@ -1,6 +1,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    border: none;
     background-color: lightblue;
     display: flex;
     flex-direction: column;
@@ -28,11 +29,11 @@ h1{
 }
 
 .item{
+    flex: 1;
     border: none;
     /* border: 1px;
     border-style: solid;
     border-color: rgb(100, 100, 100); */
-    flex: 1;
 }
 
 .buttons{
@@ -54,7 +55,7 @@ button:active{
     transform: translateY(5px);
 }
 
-.makeGrid{
+.makeNewGrid{
     background-color: lightcoral;
 }
 

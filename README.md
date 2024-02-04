@@ -1,3 +1,3 @@
 # etch-a-sketch
 
-DOM Manipulation is cool!
+## DOM Manipulation is cool!
