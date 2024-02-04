@@ -1,7 +1,7 @@
 const container = document.querySelector(".container");
 const btn = document.querySelector(".makeNewGrid");
 const reset = document.querySelector(".reset");
-let gridSize = 50; // Default grid size
+let gridSize = 20; // Default grid size
 
 // Resets the Grid
 reset.addEventListener('click', ()=>{
@@ -39,7 +39,9 @@ btn.addEventListener('click', ()=>{
 
 // Main Function
 function createGrid(size) {
+    // Clear existing grid
     container.innerHTML = "";
+    // Make Grid (create divs)
     for (let i = 1; i <= size; i++) {
         const row = document.createElement("div");
         row.classList.add("row");
@@ -49,14 +51,8 @@ function createGrid(size) {
             item.classList.add("item");
             row.appendChild(item);
 
-            item.addEventListener('mouseover', (e)=>{
-                if (e.buttons === 1 || e.button === 1){
-                    e.target.style.backgroundColor = getRandomColor();
-                }
-            });
-
-            item.addEventListener('mousedown', (e)=>{
-                e.target.style.backgroundColor = getRandomColor();
+            item.addEventListener('mouseover', ()=>{
+                item.style.backgroundColor=getRandomColor();
             });
         }
     }
