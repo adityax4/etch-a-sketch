@@ -11,6 +11,7 @@ body{
 h1{
     font-style: italic;
     text-decoration: underline;
+    margin-top: 2px;
 }
 
 .container{
@@ -43,6 +44,14 @@ button{
     margin-left: 20px;
     font-size: 18px;
     font-weight: bold;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    transition: box-shadow 0.2s ease;
+}
+
+button:active{
+    box-shadow: none;
+    transform: translateY(5px);
 }
 
 .makeGrid{
@@ -51,4 +60,10 @@ button{
 
 .reset{
     background-color: lightgreen;
+}
+
+.github{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 2px;
 }
