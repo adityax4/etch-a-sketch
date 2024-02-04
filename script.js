@@ -20,7 +20,7 @@ function getRandomColor() {
 let gridSize=16;
 
 btn.addEventListener('click', ()=>{
-    gridSize= prompt("Enter grid size(1-100): ");
+    gridSize= prompt("Enter grid size (1-100): ");
     if(gridSize>=1 && gridSize<=100){
         createGrid(parseInt(gridSize, 10));
     }
@@ -33,7 +33,7 @@ btn.addEventListener('click', ()=>{
 function createGrid(size) {
     // Clear existing grid
     container.innerHTML = "";
-
+    // Make Grid (create divs)
     for (let i = 1; i <= size; i++) {
         const row = document.createElement("div");
         row.classList.add("row");
