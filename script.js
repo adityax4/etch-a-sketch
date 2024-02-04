@@ -17,11 +17,17 @@ function getRandomColor() {
     return color;
 }
 
-let gridSize=20;
+let gridSize=16;
 
 btn.addEventListener('click', ()=>{
-    gridSize= prompt("Enter grid size: ");
-    createGrid(parseInt(gridSize, 10));
+    gridSize= prompt("Enter grid size(1-100): ");
+    if(gridSize>=1 && gridSize<=100){
+        createGrid(parseInt(gridSize, 10));
+    }
+    else{
+        alert("Invalid Range!");
+    }
+    
 })
 
 function createGrid(size) {
