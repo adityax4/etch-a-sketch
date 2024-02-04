@@ -39,9 +39,7 @@ btn.addEventListener('click', ()=>{
 
 // Main Function
 function createGrid(size) {
-    // Clear existing grid
     container.innerHTML = "";
-    // Make Grid (create divs)
     for (let i = 1; i <= size; i++) {
         const row = document.createElement("div");
         row.classList.add("row");
@@ -51,8 +49,14 @@ function createGrid(size) {
             item.classList.add("item");
             row.appendChild(item);
 
-            item.addEventListener('mouseover', ()=>{
-                item.style.backgroundColor=getRandomColor();
+            item.addEventListener('mouseover', (e)=>{
+                if (e.buttons === 1 || e.button === 1){
+                    e.target.style.backgroundColor = getRandomColor();
+                }
+            });
+
+            item.addEventListener('mousedown', (e)=>{
+                e.target.style.backgroundColor = getRandomColor();
             });
         }
     }
