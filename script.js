@@ -17,7 +17,7 @@ function getRandomColor() {
     return color;
 }
 
-let gridSize=10;
+let gridSize=20;
 
 btn.addEventListener('click', ()=>{
     gridSize= prompt("Enter grid size: ");
